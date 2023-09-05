@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /~partytown/
+Disallow: /cover-photo/
+
+Sitemap: https://cue.devsuccess101.com/sitemap.xml
