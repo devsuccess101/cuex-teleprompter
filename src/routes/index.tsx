@@ -15,11 +15,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Free Teleprompter Online - Cuex",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Cuex is a free teleprompter online",
     },
   ],
 };
