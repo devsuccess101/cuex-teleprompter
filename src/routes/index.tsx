@@ -15,11 +15,12 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Free Teleprompter Online - Cuex",
+  title: "Free teleprompter - CueX",
   meta: [
     {
       name: "description",
-      content: "Cuex is a free teleprompter online",
+      content:
+        "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
     },
   ],
 };
