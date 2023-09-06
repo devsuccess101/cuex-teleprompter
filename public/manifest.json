@@ -11,24 +11,132 @@
   "description": "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
   "icons": [
     {
-      "src": "/logo/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "/icon/android/android-launchericon-512-512.png",
+      "sizes": "512x512"
     },
     {
-      "src": "/logo/icon-256x256.png",
-      "sizes": "256x256",
-      "type": "image/png"
+      "src": "/icon/android/android-launchericon-192-192.png",
+      "sizes": "192x192"
     },
     {
-      "src": "/logo/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
+      "src": "/icon/android/android-launchericon-144-144.png",
+      "sizes": "144x144"
     },
     {
-      "src": "/logo/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/icon/android/android-launchericon-96-96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/icon/android/android-launchericon-72-72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/icon/android/android-launchericon-48-48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/icon/ios/16.png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/icon/ios/20.png",
+      "sizes": "20x20"
+    },
+    {
+      "src": "/icon/ios/29.png",
+      "sizes": "29x29"
+    },
+    {
+      "src": "/icon/ios/32.png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/icon/ios/40.png",
+      "sizes": "40x40"
+    },
+    {
+      "src": "/icon/ios/50.png",
+      "sizes": "50x50"
+    },
+    {
+      "src": "/icon/ios/57.png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "/icon/ios/58.png",
+      "sizes": "58x58"
+    },
+    {
+      "src": "/icon/ios/60.png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "/icon/ios/64.png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/icon/ios/72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/icon/ios/76.png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/icon/ios/80.png",
+      "sizes": "80x80"
+    },
+    {
+      "src": "/icon/ios/87.png",
+      "sizes": "87x87"
+    },
+    {
+      "src": "/icon/ios/100.png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "/icon/ios/114.png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "/icon/ios/120.png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/icon/ios/128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/icon/ios/144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/icon/ios/152.png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/icon/ios/167.png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "/icon/ios/180.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/icon/ios/192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon/ios/256.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/icon/ios/512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icon/ios/1024.png",
+      "sizes": "1024x1024"
     }
   ]
 }

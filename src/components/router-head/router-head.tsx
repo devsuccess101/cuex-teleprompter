@@ -14,13 +14,13 @@ export const RouterHead = component$(() => {
 
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="apple-touch-icon" href="/logo/icon-192x192.png" />
-      {[192, 256, 384, 512].map((size) => (
+      <link rel="apple-touch-icon" href="/icon/ios/16.png" />
+      {[16, 32, 64, 144, 192, 256, 512].map((size) => (
         <link
           key={size}
           rel="icon"
           type="image/png"
-          href={`/logo/icon-${size}x${size}.png`}
+          href={`/icon/ios/${size}.png`}
           sizes={`${size}x${size}`}
         />
       ))}
