@@ -15,7 +15,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Free teleprompter - CueX",
+  title: "Free Teleprompter - CueX",
   meta: [
     {
       name: "description",
