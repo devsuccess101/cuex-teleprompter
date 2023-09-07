@@ -1,0 +1,13 @@
+.cuex-editor {
+  @apply flex-1 p-12 overflow-y-auto;
+}
+.cuex-editor:before {
+  @apply block text-white/40 pointer-events-none;
+  content: attr(placeholder);
+}
+.cuex-editor:not(:empty)::before {
+  @apply hidden;
+}
+.cuex-editor:focus {
+  @apply outline-none;
+}

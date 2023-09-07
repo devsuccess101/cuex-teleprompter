@@ -1,0 +1,9 @@
+.toolbar-button {
+  @apply mx-2 cursor-pointer hover:text-yellow-400;
+}
+.toolbar-button[data-active] {
+  @apply text-yellow-400;
+}
+.toolbar-button > svg {
+  @apply h-8 w-8;
+}
