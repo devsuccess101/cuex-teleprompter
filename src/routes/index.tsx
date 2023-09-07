@@ -15,6 +15,8 @@ import {
   LuFlipVertical,
   LuPlay,
   LuPause,
+  LuX,
+  LuAlertCircle,
 } from "@qwikest/icons/lucide";
 import styles from "./index.module.css";
 
@@ -60,6 +62,8 @@ export default component$(() => {
         value === undefined ? Number(e.target?.value) : value,
       );
 
+      localStorage.setItem("settings", JSON.stringify(s.settings));
+
       // Apply new speed if running
       if (field === "speed" && interval.value) {
         const scroll = () => {
@@ -99,7 +103,7 @@ export default component$(() => {
     try {
       const raw = localStorage.getItem("settings") || "{}";
       const stored = raw ? (JSON.parse(raw) as Settings) : initialState;
-      const nextSettings = pick(stored, keys(s));
+      const nextSettings = pick(stored, keys(s.settings));
       s.settings = merge(s.settings, nextSettings);
     } catch (e) {
       s.settings = initialState;
@@ -221,12 +225,54 @@ export default component$(() => {
             )}
           </button>
           <button
-            type="button"
+            data-modal-target="popup-modal"
+            data-modal-toggle="popup-modal"
             class="text-red-500 mr-2 lg:ml-8"
-            onClick$={reset}
+            type="button"
           >
             Reset
           </button>
+
+          <div
+            tabIndex={-1}
+            id="popup-modal"
+            class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          >
+            <div class="relative w-full max-w-md max-h-full">
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button
+                  type="button"
+                  class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="popup-modal"
+                >
+                  <LuX class="w-3 h-3" />
+                  <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-6 text-center">
+                  <LuAlertCircle class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" />
+                  <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                    Are you sure that you want to delete your text and reset all
+                    configurations to their defaults?
+                  </h3>
+                  <button
+                    type="button"
+                    data-modal-hide="popup-modal"
+                    class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                    onClick$={reset}
+                  >
+                    Yes, I'm sure
+                  </button>
+                  <button
+                    data-modal-hide="popup-modal"
+                    type="button"
+                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                  >
+                    No, cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

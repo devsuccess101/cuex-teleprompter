@@ -25,3 +25,16 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-white/30;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply bg-yellow-400;
+}
+input[type="range"]::-moz-range-thumb {
+  @apply bg-yellow-400;
+}
+input[type="range"]::-moz-range-progress {
+  @apply bg-yellow-400;
+}
+input[type="range"]::-ms-fill-lower {
+  @apply bg-yellow-400;
+}
