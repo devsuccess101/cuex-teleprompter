@@ -115,6 +115,49 @@ export default component$(() => {
           `rotateX(${s.settings.flipY ? 180 : 0}deg)`,
       }}
     >
+      <div
+        id="teleprompter"
+        class={styles["teleprompter"]}
+        style={{
+          fontSize: `${s.settings.fontSize}px`,
+          textAlign: `${s.settings.textAlign}`,
+          lineHeight: s.settings.lineHeight,
+          paddingLeft: `${s.settings.margin}%`,
+          paddingRight: `${s.settings.margin}%`,
+        }}
+        contentEditable="true"
+        placeholder="Enter your text here..."
+        {...{ autofocus: "true" }}
+      >
+        You can edit this text and it will scroll if you press the ` key to make
+        it start and stop. If you need to change that key, you can simply update
+        the keycode you want to use. I'm adding a bunch of text just to see what
+        happens when I make this full page If you need to change that key, you
+        can simply update the keycode you want to use. I'm adding a bunch of
+        text just to see what happens when I make this full page If you need to
+        change that key, you can simply update the keycode you want to use. I'm
+        adding a bunch of text just to see what happens when I make this full
+        page If you need to change that key, you can simply update the keycode
+        you want to use. I'm adding a bunch of text just to see what happens
+        when I make this full page If you need to change that key, you can
+        simply update the keycode you want to use. I'm adding a bunch of text
+        just to see what happens when I make this full page If you need to
+        change that key, you can simply update the keycode you want to use. I'm
+        adding a bunch of text just to see what happens when I make this full
+        page If you need to change that key, you can simply update the keycode
+        you want to use. I'm adding a bunch of text just to see what happens
+        when I make this full page If you need to change that key, you can
+        simply update the keycode you want to use. I'm adding a bunch of text
+        just to see what happens when I make this full page If you need to
+        change that key, you can simply update the keycode you want to use. I'm
+        adding a bunch of text just to see what happens when I make this full
+        page If you need to change that key, you can simply update the keycode
+        you want to use. I'm adding a bunch of text just to see what happens
+        when I make this full page If you need to change that key, you can
+        simply update the keycode you want to use. I'm adding a bunch of text
+        just to see what happens when I make this full page
+      </div>
+
       <div class={styles["toolbar"]}>
         <div class="flex items-center">
           <div class={styles["toolbar-group"]}>
@@ -213,49 +256,6 @@ export default component$(() => {
             Reset
           </button>
         </div>
-      </div>
-
-      <div
-        id="teleprompter"
-        class={styles["teleprompter"]}
-        style={{
-          fontSize: `${s.settings.fontSize}px`,
-          textAlign: `${s.settings.textAlign}`,
-          lineHeight: s.settings.lineHeight,
-          paddingLeft: `${s.settings.margin}%`,
-          paddingRight: `${s.settings.margin}%`,
-        }}
-        contentEditable="true"
-        placeholder="Enter your text here..."
-        {...{ autofocus: "true" }}
-      >
-        You can edit this text and it will scroll if you press the ` key to make
-        it start and stop. If you need to change that key, you can simply update
-        the keycode you want to use. I'm adding a bunch of text just to see what
-        happens when I make this full page If you need to change that key, you
-        can simply update the keycode you want to use. I'm adding a bunch of
-        text just to see what happens when I make this full page If you need to
-        change that key, you can simply update the keycode you want to use. I'm
-        adding a bunch of text just to see what happens when I make this full
-        page If you need to change that key, you can simply update the keycode
-        you want to use. I'm adding a bunch of text just to see what happens
-        when I make this full page If you need to change that key, you can
-        simply update the keycode you want to use. I'm adding a bunch of text
-        just to see what happens when I make this full page If you need to
-        change that key, you can simply update the keycode you want to use. I'm
-        adding a bunch of text just to see what happens when I make this full
-        page If you need to change that key, you can simply update the keycode
-        you want to use. I'm adding a bunch of text just to see what happens
-        when I make this full page If you need to change that key, you can
-        simply update the keycode you want to use. I'm adding a bunch of text
-        just to see what happens when I make this full page If you need to
-        change that key, you can simply update the keycode you want to use. I'm
-        adding a bunch of text just to see what happens when I make this full
-        page If you need to change that key, you can simply update the keycode
-        you want to use. I'm adding a bunch of text just to see what happens
-        when I make this full page If you need to change that key, you can
-        simply update the keycode you want to use. I'm adding a bunch of text
-        just to see what happens when I make this full page
       </div>
     </div>
   );

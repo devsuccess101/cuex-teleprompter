@@ -56,7 +56,7 @@ export const InstallPrompt = component$(() => {
       class={[
         promptStore.hidden ? "hidden" : "lg:flex",
         "px-4 py-4 bg-purple-700 text-white text-center w-full",
-        "fixed left-0 bottom-0 flex-row justify-between items-center",
+        "fixed left-0 top-0 flex-row justify-between items-center",
       ]}
     >
       <div class="text-md font-bold">
