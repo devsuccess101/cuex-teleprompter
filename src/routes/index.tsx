@@ -205,8 +205,11 @@ export default component$(() => {
               />
             )}
           </button>
-
-          <button type="button" class="text-red-500 ml-8 mr-2" onClick$={reset}>
+          <button
+            type="button"
+            class="text-red-500 mr-2 lg:ml-8"
+            onClick$={reset}
+          >
             Reset
           </button>
         </div>
