@@ -204,7 +204,7 @@ export default component$(() => {
           <input
             type="range"
             title="Text size"
-            min={20}
+            min={30}
             max={180}
             value={s.settings.fontSize}
             class="w-full h-2 bg-white/80 rounded-lg appearance-none cursor-pointer mx-2"
