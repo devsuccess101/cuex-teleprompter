@@ -1,0 +1,72 @@
+.wrapper {
+  @apply flex flex-col h-screen overflow-hidden;
+}
+
+.toolbar {
+  @apply px-8 py-4 flex justify-between items-center opacity-50 hover:opacity-100 transition-all;
+}
+
+.toolbar-group {
+  @apply flex items-center sm:mx-4;
+}
+
+.toolbar-icon {
+  @apply h-8 w-8 mx-2 cursor-pointer hover:text-yellow-500;
+}
+.toolbar-icon[data-active] {
+  @apply text-yellow-500;
+}
+.toolbar-icon-play {
+  @apply text-green-500 fill-green-500 hover:text-green-500 hover:fill-green-500;
+}
+.toolbar-icon-pause {
+  @apply text-yellow-500 fill-yellow-500 hover:text-yellow-500 hover:fill-yellow-500;
+}
+
+.teleprompter {
+  @apply flex-1 p-12 overflow-y-auto;
+}
+.teleprompter:before {
+  @apply block text-white/40 pointer-events-none;
+  content: attr(placeholder);
+}
+.teleprompter:not(:empty)::before {
+  @apply hidden;
+}
+.teleprompter:focus {
+  @apply outline-none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-5 w-5 bg-yellow-500 rounded-full border-none appearance-none cursor-pointer;
+}
+input[type="range"]:disabled::-webkit-slider-thumb {
+  @apply bg-gray-400;
+}
+input[type="range"]:focus::-webkit-slider-thumb {
+  @apply border-none outline-none shadow-lg;
+}
+input[type="range"]::-moz-range-thumb {
+  @apply h-5 w-5 bg-yellow-500 rounded-full border-none appearance-none cursor-pointer;
+}
+input[type="range"]:disabled::-moz-range-thumb {
+  @apply bg-gray-400;
+}
+input[type="range"]::-moz-range-progress {
+  @apply bg-yellow-500;
+}
+input[type="range"]::-ms-fill-lower {
+  @apply bg-yellow-500;
+}
+input[type="range"].range-sm::-webkit-slider-thumb {
+  @apply h-4 w-4;
+}
+input[type="range"].range-lg::-webkit-slider-thumb {
+  @apply h-6 w-6;
+}
+input[type="range"].range-sm::-moz-range-thumb {
+  @apply h-4 w-4;
+}
+input[type="range"].range-lg::-moz-range-thumb {
+  @apply h-6 w-6;
+}

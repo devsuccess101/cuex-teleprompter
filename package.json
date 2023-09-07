@@ -26,6 +26,7 @@
     "@builder.io/qwik": "^1.2.10",
     "@builder.io/qwik-city": "^1.2.10",
     "@types/eslint": "8.44.1",
+    "@types/lodash": "^4.14.198",
     "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "6.2.0",
     "@typescript-eslint/parser": "6.2.0",
@@ -40,5 +41,9 @@
     "vite": "4.4.7",
     "vite-tsconfig-paths": "4.2.0",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@qwikest/icons": "^0.0.8",
+    "lodash": "^4.17.21"
   }
 }
