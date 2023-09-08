@@ -2,13 +2,17 @@ import { CuexContext } from "../context";
 import { component$, useContext } from "@builder.io/qwik";
 import {
   LuAlignCenter,
+  LuAlignJustify,
   LuAlignLeft,
   LuAlignRight,
   LuFlipHorizontal,
   LuFlipVertical,
+  LuGauge,
+  LuMoveHorizontal,
   LuPause,
   LuPlay,
   LuSquare,
+  LuType,
 } from "@qwikest/icons/lucide";
 import { Slide } from "../slide";
 import { ToolbarButton } from "../button/toolbar-button";
@@ -23,25 +27,126 @@ export const Toolbar = component$(() => {
       <div class="flex items-center">
         <div class="flex items-center sm:mx-4">
           <ToolbarButton
-            title="Left"
-            active={cuex.config.textAlign === "left"}
-            onClick$={() => cuex.update({ textAlign: "left" })}
+            title="Text align"
+            data-popover-target="text-align-panel"
+            data-popover-trigger="click"
           >
-            <LuAlignLeft />
+            {cuex.config.textAlign === "left" && <LuAlignLeft />}
+            {cuex.config.textAlign === "center" && <LuAlignCenter />}
+            {cuex.config.textAlign === "right" && <LuAlignRight />}
+            {cuex.config.textAlign === "justify" && <LuAlignJustify />}
+
+            <div
+              q:slot="overlay"
+              id="text-align-panel"
+              data-popover
+              role="tooltip"
+              class="absolute z-10 invisible inline-block w-50 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0"
+            >
+              <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+                <h3 class="font-semibold text-gray-900 dark:text-white">
+                  Text align{" "}
+                  <span class="capitalize">({cuex.config.textAlign})</span>
+                </h3>
+              </div>
+              <div class="py-2 flex items-center justify-center sm:mx-4">
+                <ToolbarButton
+                  title="Left"
+                  active={cuex.config.textAlign === "left"}
+                  onClick$={() => cuex.update({ textAlign: "left" })}
+                >
+                  <LuAlignLeft />
+                </ToolbarButton>
+                <ToolbarButton
+                  title="Center"
+                  active={cuex.config.textAlign === "center"}
+                  onClick$={() => cuex.update({ textAlign: "center" })}
+                >
+                  <LuAlignCenter />
+                </ToolbarButton>
+                <ToolbarButton
+                  title="Right"
+                  active={cuex.config.textAlign === "right"}
+                  onClick$={() => cuex.update({ textAlign: "right" })}
+                >
+                  <LuAlignRight />
+                </ToolbarButton>
+                <ToolbarButton
+                  title="Justify"
+                  active={cuex.config.textAlign === "justify"}
+                  onClick$={() => cuex.update({ textAlign: "justify" })}
+                >
+                  <LuAlignJustify />
+                </ToolbarButton>
+              </div>
+              <div data-popper-arrow></div>
+            </div>
           </ToolbarButton>
-          <ToolbarButton
-            title="Center"
-            active={cuex.config.textAlign === "center"}
-            onClick$={() => cuex.update({ textAlign: "center" })}
-          >
-            <LuAlignCenter />
+
+          <ToolbarButton title="Font size">
+            <LuType
+              data-popover-target="font-size-panel"
+              data-popover-trigger="click"
+              class="outline-none"
+            />
+            <div
+              q:slot="overlay"
+              id="font-size-panel"
+              data-popover
+              role="tooltip"
+              class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0"
+            >
+              <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+                <h3 class="font-semibold text-gray-900 dark:text-white">
+                  Font size ({cuex.config.fontSize}px)
+                </h3>
+              </div>
+              <div class="py-4 flex justify-center items-center">
+                <Slide
+                  title="Font size"
+                  min={30}
+                  max={180}
+                  value={cuex.config.fontSize}
+                  onInput$={(e: any) =>
+                    cuex.update({ fontSize: Number(e.target?.value) })
+                  }
+                />
+              </div>
+              <div data-popper-arrow></div>
+            </div>
           </ToolbarButton>
-          <ToolbarButton
-            title="Right"
-            active={cuex.config.textAlign === "right"}
-            onClick$={() => cuex.update({ textAlign: "right" })}
-          >
-            <LuAlignRight />
+
+          <ToolbarButton title="Margin">
+            <LuMoveHorizontal
+              data-popover-target="margin-panel"
+              data-popover-trigger="click"
+              class="outline-none"
+            />
+            <div
+              q:slot="overlay"
+              id="margin-panel"
+              data-popover
+              role="tooltip"
+              class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0"
+            >
+              <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+                <h3 class="font-semibold text-gray-900 dark:text-white">
+                  Margin ({cuex.config.margin}%)
+                </h3>
+              </div>
+              <div class="py-4 flex justify-center items-center">
+                <Slide
+                  title="Margin"
+                  min={0}
+                  max={40}
+                  value={cuex.config.margin}
+                  onInput$={(e: any) =>
+                    cuex.update({ margin: Number(e.target?.value) })
+                  }
+                />
+              </div>
+              <div data-popper-arrow></div>
+            </div>
           </ToolbarButton>
         </div>
 
@@ -62,31 +167,40 @@ export const Toolbar = component$(() => {
           </ToolbarButton>
         </div>
 
-        <Slide
-          title="Text size"
-          min={30}
-          max={180}
-          value={cuex.config.fontSize}
-          onInput$={(e: any) =>
-            cuex.update({ fontSize: Number(e.target?.value) })
-          }
-        />
-        <Slide
-          title="Margin"
-          min={0}
-          max={40}
-          value={cuex.config.margin}
-          onInput$={(e: any) =>
-            cuex.update({ margin: Number(e.target?.value) })
-          }
-        />
-        <Slide
-          title="Speed"
-          min={1}
-          max={50}
-          value={cuex.config.speed}
-          onInput$={(e: any) => cuex.update({ speed: Number(e.target?.value) })}
-        />
+        <div class="flex items-center sm:mx-4">
+          <ToolbarButton title="Speed">
+            <LuGauge
+              data-popover-target="speed-panel"
+              data-popover-trigger="click"
+              class="outline-none"
+            />
+            <div
+              q:slot="overlay"
+              id="speed-panel"
+              data-popover
+              role="tooltip"
+              class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0"
+            >
+              <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+                <h3 class="font-semibold text-gray-900 dark:text-white">
+                  Speed ({cuex.config.speed})
+                </h3>
+              </div>
+              <div class="py-4 flex justify-center items-center">
+                <Slide
+                  title="Speed"
+                  min={1}
+                  max={50}
+                  value={cuex.config.speed}
+                  onInput$={(e: any) =>
+                    cuex.update({ speed: Number(e.target?.value) })
+                  }
+                />
+              </div>
+              <div data-popper-arrow></div>
+            </div>
+          </ToolbarButton>
+        </div>
       </div>
 
       <div class="flex items-center sm:mx-4">

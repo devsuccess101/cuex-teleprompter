@@ -2,7 +2,7 @@ import { type QRL, createContextId, type Signal } from "@builder.io/qwik";
 
 export interface CuexConfig {
   fontSize: number;
-  textAlign: "left" | "right" | "center";
+  textAlign: "left" | "right" | "center" | "justify";
   lineHeight: number;
   flipX: boolean;
   flipY: boolean;
