@@ -29,10 +29,12 @@ export const Editor = component$<EditorProps>(({ ref }) => {
         placeholder="Enter your text here..."
         {...{ autofocus: "true" }}
       >
-        <div contentEditable="false" aria-hidden={config.status == "idle"}>
-          <hr class="my-12" />
-          <p class="h-screen">The end</p>
-        </div>
+        {config.status !== "idle" && (
+          <div contentEditable="false">
+            <hr class="my-12" />
+            <p class="h-screen">The end</p>
+          </div>
+        )}
       </div>
     </div>
   );
