@@ -25,7 +25,8 @@ export default component$(() => {
     update: $(function (this, data) {
       this.config = merge(this.config, data);
       localStorage.setItem("config", JSON.stringify(this.config));
-      if (data.speed) {
+
+      if (data.speed && this.config.status === "running") {
         const newInterval = setInterval(
           this.scroll.bind(this),
           51 - this.config.speed,
