@@ -240,7 +240,6 @@ export const Toolbar = component$(() => {
           onClick$={() => {
             cuex.pause();
             cuex.update({ status: "idle" });
-            cuex.focus();
           }}
         >
           <LuSquare class="text-red-500 fill-red-500 hover:text-red-500 hover:fill-red-500" />

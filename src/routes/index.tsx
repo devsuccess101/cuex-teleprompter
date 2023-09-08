@@ -26,7 +26,6 @@ export default component$(() => {
       const editor = document.getElementById("cuex-editor");
       if (editor) {
         editor.innerHTML = "";
-        editor.focus();
       }
     }),
     update: $(function (this, data) {
@@ -92,8 +91,6 @@ export default component$(() => {
       cuex.config = merge(cuex.config, nextVal);
     } catch (e) {
       cuex.config = defaultConfig;
-    } finally {
-      cuex.focus();
     }
   });
 
