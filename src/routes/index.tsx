@@ -72,7 +72,7 @@ export default component$(() => {
         const scrollHeight = this.ref.value.scrollHeight;
         const windowHeight = window.innerHeight;
 
-        if (scrollTop + windowHeight - 63 >= scrollHeight) {
+        if (scrollTop + windowHeight >= scrollHeight) {
           this.ref.value.scrollTop = 0;
         } else {
           const currentScroll = this.ref.value.scrollTop;
