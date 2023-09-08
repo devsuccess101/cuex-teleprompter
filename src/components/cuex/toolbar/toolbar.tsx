@@ -13,6 +13,7 @@ import {
   LuRefreshCcw,
   LuSquare,
   LuType,
+  LuXCircle,
   LuZap,
 } from "@qwikest/icons/lucide";
 import { Slide } from "../slide";
@@ -51,7 +52,11 @@ export const Toolbar = component$(() => {
             id="text-align-panel"
             data-popover
             role="tooltip"
-            class="absolute z-10 invisible inline-block w-50 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0"
+            class={[
+              "absolute z-10 invisible inline-block w-50 text-sm text-gray-500",
+              "transition-opacity duration-300 bg-white",
+              "border border-gray-200 rounded-lg shadow-sm opacity-0",
+            ]}
           >
             <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
               <h3 class="font-semibold text-gray-900 dark:text-white">
@@ -137,7 +142,11 @@ export const Toolbar = component$(() => {
             id="margin-panel"
             data-popover
             role="tooltip"
-            class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0"
+            class={[
+              "absolute z-10 invisible inline-block w-64 text-sm text-gray-500",
+              "transition-opacity duration-300 bg-white",
+              "border border-gray-200 rounded-lg shadow-sm opacity-0",
+            ]}
           >
             <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
               <h3 class="font-semibold text-gray-900 dark:text-white">
@@ -157,21 +166,6 @@ export const Toolbar = component$(() => {
             </div>
             <div data-popper-arrow></div>
           </div>
-        </ToolbarButton>
-
-        <ToolbarButton
-          title="Flip horizontal"
-          active={cuex.config.flipX}
-          onClick$={() => cuex.update({ flipX: !cuex.config.flipX })}
-        >
-          <LuFlipHorizontal />
-        </ToolbarButton>
-        <ToolbarButton
-          title="Flip vertical"
-          active={cuex.config.flipY}
-          onClick$={() => cuex.update({ flipY: !cuex.config.flipY })}
-        >
-          <LuFlipVertical />
         </ToolbarButton>
 
         <ToolbarButton title="Speed">
@@ -205,6 +199,21 @@ export const Toolbar = component$(() => {
             </div>
             <div data-popper-arrow></div>
           </div>
+        </ToolbarButton>
+
+        <ToolbarButton
+          title="Flip horizontal"
+          active={cuex.config.flipX}
+          onClick$={() => cuex.update({ flipX: !cuex.config.flipX })}
+        >
+          <LuFlipHorizontal />
+        </ToolbarButton>
+        <ToolbarButton
+          title="Flip vertical"
+          active={cuex.config.flipY}
+          onClick$={() => cuex.update({ flipY: !cuex.config.flipY })}
+        >
+          <LuFlipVertical />
         </ToolbarButton>
 
         <ToolbarButton
