@@ -13,7 +13,6 @@ import {
   LuRefreshCcw,
   LuSquare,
   LuType,
-  LuXCircle,
   LuZap,
 } from "@qwikest/icons/lucide";
 import { Slide } from "../slide";
