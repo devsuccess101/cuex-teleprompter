@@ -1,4 +1,4 @@
 .toolbar {
   @apply px-8 py-8 flex items-center opacity-50 hover:opacity-100 transition-all;
-  @apply md:px-8 md:py-4 md:justify-center;
+  @apply md:px-8 md:py-4 sm:justify-center;
 }

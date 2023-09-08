@@ -41,11 +41,7 @@ export const Toolbar = component$(() => {
           data-popover-target="text-align-panel"
           data-popover-trigger="click"
         >
-          {cuex.config.textAlign === "left" && <LuAlignLeft />}
-          {cuex.config.textAlign === "center" && <LuAlignCenter />}
-          {cuex.config.textAlign === "right" && <LuAlignRight />}
-          {cuex.config.textAlign === "justify" && <LuAlignJustify />}
-
+          <LuAlignLeft />
           <div
             q:slot="overlay"
             id="text-align-panel"
@@ -97,12 +93,12 @@ export const Toolbar = component$(() => {
           </div>
         </ToolbarButton>
 
-        <ToolbarButton title="Font size">
-          <LuType
-            data-popover-target="font-size-panel"
-            data-popover-trigger="click"
-            class="outline-none"
-          />
+        <ToolbarButton
+          title="Font size"
+          data-popover-target="font-size-panel"
+          data-popover-trigger="click"
+        >
+          <LuType class="outline-none" />
           <div
             q:slot="overlay"
             id="font-size-panel"
@@ -130,12 +126,12 @@ export const Toolbar = component$(() => {
           </div>
         </ToolbarButton>
 
-        <ToolbarButton title="Margin">
-          <LuMoveHorizontal
-            data-popover-target="margin-panel"
-            data-popover-trigger="click"
-            class="outline-none"
-          />
+        <ToolbarButton
+          title="Margin"
+          data-popover-target="margin-panel"
+          data-popover-trigger="click"
+        >
+          <LuMoveHorizontal class="outline-none" />
           <div
             q:slot="overlay"
             id="margin-panel"
@@ -167,12 +163,12 @@ export const Toolbar = component$(() => {
           </div>
         </ToolbarButton>
 
-        <ToolbarButton title="Speed">
-          <LuZap
-            data-popover-target="speed-panel"
-            data-popover-trigger="click"
-            class="outline-none"
-          />
+        <ToolbarButton
+          title="Speed"
+          data-popover-target="speed-panel"
+          data-popover-trigger="click"
+        >
+          <LuZap class="outline-none" />
           <div
             q:slot="overlay"
             id="speed-panel"
@@ -236,10 +232,7 @@ export const Toolbar = component$(() => {
         <ToolbarButton
           title="Stop"
           aria-hidden={cuex.config.status === "idle"}
-          onClick$={() => {
-            cuex.pause();
-            cuex.update({ status: "idle" });
-          }}
+          onClick$={() => cuex.update({ status: "idle" })}
         >
           <LuSquare class="text-red-500 fill-red-500 hover:text-red-500 hover:fill-red-500" />
         </ToolbarButton>

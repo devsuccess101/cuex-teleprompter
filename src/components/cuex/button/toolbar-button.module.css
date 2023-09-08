@@ -5,5 +5,5 @@
   @apply text-yellow-400;
 }
 .toolbar-button > svg {
-  @apply h-6 w-6 md:h-8 md:w-8;
+  @apply h-6 w-6 sm:h-8 sm:w-8;
 }
