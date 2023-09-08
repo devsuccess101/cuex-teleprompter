@@ -21,7 +21,7 @@ export const ToolbarButton = component$<ToolbarIconProps>(
           type="button"
           title={title}
           data-active={active}
-          class={[styles["toolbar-button"], classes]}
+          class={[styles["toolbar-button"], "mx-2", classes]}
           onClick$={onClick$}
           {...others}
         >

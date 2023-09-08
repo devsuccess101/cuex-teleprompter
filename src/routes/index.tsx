@@ -33,6 +33,12 @@ export default component$(() => {
         this.ref.value.focus();
       }
     }),
+    play: $(function (this) {
+      this.update({ play: true });
+    }),
+    pause: $(function (this) {
+      this.update({ play: false });
+    }),
   });
 
   useContextProvider(CuexContext, cuex);

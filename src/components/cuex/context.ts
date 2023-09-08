@@ -13,9 +13,11 @@ export interface CuexConfig {
 
 export interface CuexStore {
   config: CuexConfig;
+  ref: Signal<HTMLElement | undefined>;
   update: QRL<(this: CuexStore, data: Partial<CuexConfig>) => void>;
   reset: QRL<(this: CuexStore) => void>;
-  ref: Signal<HTMLElement | undefined>;
+  play: QRL<(this: CuexStore) => void>;
+  pause: QRL<(this: CuexStore) => void>;
 }
 
 export const defaultConfig: CuexConfig = {

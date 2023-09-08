@@ -1,5 +1,5 @@
-import { type CuexConfig, CuexContext } from "../context";
-import { type PropFunction, component$, useContext } from "@builder.io/qwik";
+import { CuexContext } from "../context";
+import { component$, useContext } from "@builder.io/qwik";
 import {
   LuAlignCenter,
   LuAlignLeft,
@@ -14,11 +14,7 @@ import { ToolbarButton } from "../button/toolbar-button";
 import { ResetModal } from "../reset-modal";
 import styles from "./toolbar.module.css";
 
-interface ToolbarProps {
-  onChange$?: PropFunction<(field: keyof CuexConfig, value: any) => void>;
-}
-
-export const Toolbar = component$<ToolbarProps>(({ onChange$ }) => {
+export const Toolbar = component$(() => {
   const cuex = useContext(CuexContext);
 
   return (
@@ -94,14 +90,18 @@ export const Toolbar = component$<ToolbarProps>(({ onChange$ }) => {
 
       <div class="flex items-center sm:mx-4">
         <ToolbarButton
-          title={cuex.config.play ? "Pause" : "Play"}
-          onClick$={() => onChange$?.apply(this, ["play", !cuex.config.play])}
+          title="Play"
+          aria-hidden={cuex.config.play}
+          onClick$={() => cuex.play()}
         >
-          {!cuex.config.play ? (
-            <LuPlay class="text-green-500 fill-green-500 hover:text-green-500 hover:fill-green-500" />
-          ) : (
-            <LuPause class="text-yellow-400 fill-yellow-400 hover:text-yellow-400 hover:fill-yellow-400" />
-          )}
+          <LuPlay class="text-green-500 fill-green-500 hover:text-green-500 hover:fill-green-500" />
+        </ToolbarButton>
+        <ToolbarButton
+          title="Pause"
+          aria-hidden={!cuex.config.play}
+          onClick$={() => cuex.pause()}
+        >
+          <LuPause class="text-yellow-400 fill-yellow-400 hover:text-yellow-400 hover:fill-yellow-400" />
         </ToolbarButton>
         <ToolbarButton
           title="Reset"

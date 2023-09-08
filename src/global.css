@@ -38,3 +38,7 @@ input[type="range"]::-moz-range-progress {
 input[type="range"]::-ms-fill-lower {
   @apply bg-yellow-400;
 }
+
+[aria-hidden="true"] {
+  @apply hidden;
+}
