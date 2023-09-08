@@ -14,12 +14,6 @@
   "name": "CueX",
   "short_name": "CueX",
   "description": "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
-  "shortcuts": [
-    {
-      "name": "About",
-      "url": "/about"
-    }
-  ],
   "icons": [
     {
       "src": "/icon/windows11/SmallTile.scale-100.png",
