@@ -117,13 +117,28 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = {
-  title: "Free Teleprompter - CueX",
-  meta: [
-    {
-      name: "description",
-      content:
-        "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
-    },
-  ],
+export const head: DocumentHead = ({ url }) => {
+  return {
+    title: "Free Teleprompter - CueX",
+    meta: [
+      {
+        name: "description",
+        content:
+          "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
+      },
+      {
+        name: "og:title",
+        content: "#1 Free Online Teleprompter - Try CueX now!",
+      },
+      {
+        name: "og:description",
+        content:
+          "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
+      },
+      {
+        name: "og:image",
+        content: `${url.origin}/images/social-cover.jpg`,
+      },
+    ],
+  };
 };
