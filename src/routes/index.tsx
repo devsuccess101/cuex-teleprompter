@@ -25,6 +25,16 @@ export default component$(() => {
     update: $(function (this, data) {
       this.config = merge(this.config, data);
       localStorage.setItem("config", JSON.stringify(this.config));
+      if (data.speed) {
+        const newInterval = setInterval(
+          this.scroll.bind(this),
+          51 - this.config.speed,
+        );
+        if (this.scrollInterval) {
+          clearInterval(this.scrollInterval);
+          this.scrollInterval = newInterval;
+        }
+      }
     }),
     reset: $(function (this) {
       this.update(defaultConfig);
