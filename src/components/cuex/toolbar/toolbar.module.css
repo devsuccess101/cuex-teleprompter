@@ -1,0 +1,4 @@
+.toolbar {
+  @apply px-4 py-3 flex justify-between items-center opacity-50 hover:opacity-100 transition-all;
+  @apply md:px-8 md:py-4;
+}
