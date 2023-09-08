@@ -22,6 +22,13 @@ export default component$(() => {
   const cuex = useStore<CuexStore>({
     ref: scrollViewRef,
     config: defaultConfig,
+    focus: $(function (this) {
+      const editor = document.getElementById("cuex-editor");
+      if (editor) {
+        editor.innerHTML = "";
+        editor.focus();
+      }
+    }),
     update: $(function (this, data) {
       this.config = merge(this.config, data);
       localStorage.setItem("config", JSON.stringify(this.config));
@@ -39,11 +46,7 @@ export default component$(() => {
     }),
     reset: $(function (this) {
       this.update(defaultConfig);
-      const editor = document.getElementById("cuex-editor");
-      if (editor) {
-        editor.innerHTML = "";
-        editor.focus();
-      }
+      this.focus();
     }),
     startOrResume: $(function (this) {
       if (this.config.status !== "running") {
@@ -89,6 +92,8 @@ export default component$(() => {
       cuex.config = merge(cuex.config, nextVal);
     } catch (e) {
       cuex.config = defaultConfig;
+    } finally {
+      cuex.focus();
     }
   });
 

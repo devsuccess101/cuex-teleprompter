@@ -8,6 +8,7 @@ import {
   LuFlipVertical,
   LuPause,
   LuPlay,
+  LuSquare,
 } from "@qwikest/icons/lucide";
 import { Slide } from "../slide";
 import { ToolbarButton } from "../button/toolbar-button";
@@ -89,6 +90,17 @@ export const Toolbar = component$(() => {
       </div>
 
       <div class="flex items-center sm:mx-4">
+        <ToolbarButton
+          title="Stop"
+          aria-hidden={cuex.config.status === "idle"}
+          onClick$={() => {
+            cuex.pause();
+            cuex.update({ status: "idle" });
+            cuex.focus();
+          }}
+        >
+          <LuSquare class="text-red-500 fill-red-500 hover:text-red-500 hover:fill-red-500" />
+        </ToolbarButton>
         <ToolbarButton
           title="Play"
           aria-hidden={cuex.config.status === "running"}

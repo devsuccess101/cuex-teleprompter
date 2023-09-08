@@ -20,6 +20,7 @@ export interface CuexStore {
   pause: QRL<(this: CuexStore) => void>;
   scroll: QRL<(this: CuexStore) => void>;
   scrollInterval?: any;
+  focus: QRL<(this: CuexStore) => void>;
 }
 
 export const defaultConfig: CuexConfig = {
