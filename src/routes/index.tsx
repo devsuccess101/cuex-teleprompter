@@ -18,9 +18,9 @@ import { Editor } from "~/components/cuex/editor/editor";
 import { Toolbar } from "~/components/cuex/toolbar/toolbar";
 
 export default component$(() => {
-  const editorRef = useSignal<HTMLElement>();
+  const scrollViewRef = useSignal<HTMLElement>();
   const cuex = useStore<CuexStore>({
-    ref: editorRef,
+    ref: scrollViewRef,
     config: defaultConfig,
     update: $(function (this, data) {
       this.config = merge(this.config, data);
@@ -28,16 +28,43 @@ export default component$(() => {
     }),
     reset: $(function (this) {
       this.update(defaultConfig);
-      if (this.ref.value) {
-        this.ref.value.innerHTML = "";
-        this.ref.value.focus();
+      const editor = document.getElementById("cuex-editor");
+      if (editor) {
+        editor.innerHTML = "";
+        editor.focus();
       }
     }),
-    play: $(function (this) {
-      this.update({ play: true });
+    startOrResume: $(function (this) {
+      if (this.config.status !== "running") {
+        this.update({ status: "running" });
+        this.scrollInterval = setInterval(
+          this.scroll.bind(this),
+          51 - this.config.speed,
+        );
+      }
     }),
     pause: $(function (this) {
-      this.update({ play: false });
+      if (this.config.status !== "paused") {
+        this.update({ status: "paused" });
+        if (this.scrollInterval) {
+          clearInterval(this.scrollInterval);
+          this.scrollInterval = undefined;
+        }
+      }
+    }),
+    scroll: $(function (this) {
+      if (this.config.status === "running" && this.ref.value) {
+        const scrollTop = this.ref.value.scrollTop;
+        const scrollHeight = this.ref.value.scrollHeight;
+        const windowHeight = window.innerHeight;
+
+        if (scrollTop + windowHeight - 63 >= scrollHeight) {
+          this.ref.value.scrollTop = 0;
+        } else {
+          const currentScroll = this.ref.value.scrollTop;
+          this.ref.value.scrollTop = currentScroll + 2;
+        }
+      }
     }),
   });
 
@@ -63,7 +90,7 @@ export default component$(() => {
           `rotateX(${cuex.config.flipY ? 180 : 0}deg)`,
       }}
     >
-      <Editor ref={editorRef} />
+      <Editor ref={scrollViewRef} />
       <Toolbar />
     </div>
   );

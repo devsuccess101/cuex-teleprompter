@@ -1,5 +1,16 @@
+.cuex-editor-root {
+  @apply flex-1 overflow-y-auto;
+}
+.cuex-editor-root[data-status="running"]:before,
+.cuex-editor-root[data-status="paused"]:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  height: calc(100vh - 64px - 2.5rem);
+}
+
 .cuex-editor {
-  @apply flex-1 p-12 overflow-y-auto;
+  @apply w-full h-full p-12;
 }
 .cuex-editor:before {
   @apply block text-white/40 pointer-events-none;

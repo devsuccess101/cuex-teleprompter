@@ -91,14 +91,14 @@ export const Toolbar = component$(() => {
       <div class="flex items-center sm:mx-4">
         <ToolbarButton
           title="Play"
-          aria-hidden={cuex.config.play}
-          onClick$={() => cuex.play()}
+          aria-hidden={cuex.config.status === "running"}
+          onClick$={() => cuex.startOrResume()}
         >
           <LuPlay class="text-green-500 fill-green-500 hover:text-green-500 hover:fill-green-500" />
         </ToolbarButton>
         <ToolbarButton
           title="Pause"
-          aria-hidden={!cuex.config.play}
+          aria-hidden={cuex.config.status !== "running"}
           onClick$={() => cuex.pause()}
         >
           <LuPause class="text-yellow-400 fill-yellow-400 hover:text-yellow-400 hover:fill-yellow-400" />

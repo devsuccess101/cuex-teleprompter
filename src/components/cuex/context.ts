@@ -8,7 +8,7 @@ export interface CuexConfig {
   flipY: boolean;
   speed: number;
   margin: number;
-  play: boolean;
+  status: "idle" | "running" | "paused";
 }
 
 export interface CuexStore {
@@ -16,8 +16,10 @@ export interface CuexStore {
   ref: Signal<HTMLElement | undefined>;
   update: QRL<(this: CuexStore, data: Partial<CuexConfig>) => void>;
   reset: QRL<(this: CuexStore) => void>;
-  play: QRL<(this: CuexStore) => void>;
+  startOrResume: QRL<(this: CuexStore) => void>;
   pause: QRL<(this: CuexStore) => void>;
+  scroll: QRL<(this: CuexStore) => void>;
+  scrollInterval?: any;
 }
 
 export const defaultConfig: CuexConfig = {
@@ -28,7 +30,7 @@ export const defaultConfig: CuexConfig = {
   flipY: false,
   speed: 10,
   margin: 5,
-  play: false,
+  status: "idle",
 };
 
 export const CuexContext = createContextId<CuexStore>("cuex-state");
