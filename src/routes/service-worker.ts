@@ -12,9 +12,10 @@ import { precacheAndRoute } from "workbox-precaching";
 
 setupServiceWorker();
 
-precacheAndRoute(["/", "/manifest.json"]);
-
-addEventListener("install", () => self.skipWaiting());
+addEventListener("install", () => {
+  self.skipWaiting();
+  precacheAndRoute(["/", "/manifest.json"]);
+});
 
 addEventListener("activate", () => self.clients.claim());
 
