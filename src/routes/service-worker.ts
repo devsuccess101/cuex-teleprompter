@@ -21,9 +21,10 @@ addEventListener("install", () => {
   self.skipWaiting();
 
   // perform offline mode
-  precacheAndRoute(["/", "/manifest.json"]);
+  precacheAndRoute(["/", "/?pwa=true"]);
   cleanupOutdatedCaches();
   registerRoute(new NavigationRoute(createHandlerBoundToURL("/")));
+  registerRoute(new NavigationRoute(createHandlerBoundToURL("/?pwa=true")));
 });
 
 addEventListener("activate", () => self.clients.claim());
