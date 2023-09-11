@@ -28,14 +28,7 @@ export const Editor = component$<EditorProps>(({ ref }) => {
         contentEditable="true"
         placeholder="Enter your text here..."
         {...{ autofocus: "true" }}
-      >
-        {config.status !== "idle" && (
-          <div contentEditable="false">
-            <hr class="my-12" />
-            <p class="h-screen">The end</p>
-          </div>
-        )}
-      </div>
+      />
     </div>
   );
 });

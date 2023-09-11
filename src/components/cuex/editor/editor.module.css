@@ -2,11 +2,13 @@
   @apply flex-1 overflow-y-auto;
 }
 .cuex-editor-root[data-status="running"]:before,
-.cuex-editor-root[data-status="paused"]:before {
+.cuex-editor-root[data-status="paused"]:before,
+.cuex-editor-root[data-status="running"]:after,
+.cuex-editor-root[data-status="paused"]:after {
   display: block;
   content: " ";
   width: 100%;
-  height: calc(100vh - 64px - 2.5rem);
+  min-height: calc(100vh - 64px - 2.5rem);
 }
 
 .cuex-editor {
@@ -21,4 +23,9 @@
 }
 .cuex-editor:focus {
   @apply outline-none;
+}
+.cuex-editor * {
+  font-size: inherit !important;
+  color: inherit !important;
+  background-color: inherit !important;
 }
