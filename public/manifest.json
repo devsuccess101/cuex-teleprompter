@@ -10,7 +10,7 @@
   ],
   "orientation": "any",
   "scope": "/",
-  "start_url": "/?pwa=true",
+  "start_url": "/",
   "name": "CueX",
   "short_name": "CueX",
   "description": "CueX is a free online teleprompter that runs on smartphones, tablets and desktops, making it your ideal companion for smooth and professional script delivery.",
