@@ -8,8 +8,11 @@
  * You can also use this file to add more functionality that runs in the service worker.
  */
 import { setupServiceWorker } from "@builder.io/qwik-city/service-worker";
+import { precacheAndRoute } from "workbox-precaching";
 
 setupServiceWorker();
+
+precacheAndRoute(["/", "/manifest.json"]);
 
 addEventListener("install", () => self.skipWaiting());
 
