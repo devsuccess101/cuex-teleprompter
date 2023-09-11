@@ -25,7 +25,7 @@ export const Editor = component$<EditorProps>(({ ref }) => {
           paddingLeft: `${config.margin}%`,
           paddingRight: `${config.margin}%`,
         }}
-        contentEditable="true"
+        contentEditable={config.status !== "running" ? "true" : "false"}
         placeholder="Enter your text here..."
         {...{ autofocus: "true" }}
       />
