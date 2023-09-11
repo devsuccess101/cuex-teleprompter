@@ -8,13 +8,22 @@
  * You can also use this file to add more functionality that runs in the service worker.
  */
 import { setupServiceWorker } from "@builder.io/qwik-city/service-worker";
-import { precacheAndRoute } from "workbox-precaching";
+import {
+  cleanupOutdatedCaches,
+  createHandlerBoundToURL,
+  precacheAndRoute,
+} from "workbox-precaching";
+import { NavigationRoute, registerRoute } from "workbox-routing";
 
 setupServiceWorker();
 
 addEventListener("install", () => {
   self.skipWaiting();
+
+  // perform offline mode
   precacheAndRoute(["/", "/manifest.json"]);
+  cleanupOutdatedCaches();
+  registerRoute(new NavigationRoute(createHandlerBoundToURL("/")));
 });
 
 addEventListener("activate", () => self.clients.claim());
