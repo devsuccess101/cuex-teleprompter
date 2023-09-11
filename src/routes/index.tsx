@@ -131,7 +131,7 @@ export const head: DocumentHead = ({ url }) => {
       },
       {
         name: "og:title",
-        content: "#1 Free Online Teleprompter - Try CueX now!",
+        content: "Free Online Teleprompter - Try CueX now!",
       },
       {
         name: "og:description",
