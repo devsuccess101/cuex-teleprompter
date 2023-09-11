@@ -7,7 +7,7 @@ import {
   useStore,
   useVisibleTask$,
 } from "@builder.io/qwik";
-import { pick, keys, omit, merge } from "lodash";
+import { pick, keys, omit, assign, merge } from "lodash";
 import {
   defaultConfig,
   CuexContext,
@@ -29,7 +29,7 @@ export default component$(() => {
       }
     }),
     update: $(function (this, data) {
-      this.config = merge(this.config, data);
+      this.config = assign(this.config, data);
       localStorage.setItem("config", JSON.stringify(this.config));
 
       if (data.status === "idle") {
@@ -97,8 +97,8 @@ export default component$(() => {
     try {
       const raw = localStorage.getItem("config") || "{}";
       const stored = raw ? (JSON.parse(raw) as CuexConfig) : defaultConfig;
-      const nextVal = pick(stored, omit(keys(stored), "play"));
-      cuex.config = merge(cuex.config, nextVal);
+      const nextVal = pick(stored, keys(omit(cuex.config, "status")));
+      cuex.config = assign(cuex.config, nextVal);
     } catch (e) {
       cuex.config = defaultConfig;
     }
