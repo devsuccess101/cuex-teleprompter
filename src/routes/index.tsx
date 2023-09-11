@@ -32,10 +32,13 @@ export default component$(() => {
       this.config = merge(this.config, data);
       localStorage.setItem("config", JSON.stringify(this.config));
 
-      if (data.speed && this.config.status === "idle") {
+      if (data.status === "idle") {
         if (this.scrollInterval) {
           clearInterval(this.scrollInterval);
           this.scrollInterval = undefined;
+          if (this.ref.value) {
+            this.ref.value.scrollTop = 0;
+          }
         }
       }
 

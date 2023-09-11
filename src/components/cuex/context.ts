@@ -29,7 +29,7 @@ export const defaultConfig: CuexConfig = {
   lineHeight: 1.5,
   flipX: false,
   flipY: false,
-  speed: 10,
+  speed: 25,
   margin: 5,
   status: "idle",
 };
