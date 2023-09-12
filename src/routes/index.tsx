@@ -108,10 +108,7 @@ export default component$(() => {
 
   return (
     <div
-      class={[
-        "flex h-screen overflow-hidden",
-        cuex.config.flipY ? "flex-col-reverse" : "flex-col",
-      ]}
+      class="flex h-screen overflow-hidden flex-col relative"
       style={{
         maxHeight: "-webkit-fill-available",
         transform:
@@ -119,8 +116,8 @@ export default component$(() => {
           `rotateX(${cuex.config.flipY ? 180 : 0}deg)`,
       }}
     >
-      <Editor />
       <Toolbar />
+      <Editor />
     </div>
   );
 });
