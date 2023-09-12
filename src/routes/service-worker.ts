@@ -22,25 +22,13 @@ precacheAndRoute([
   { url: "/", revision },
   { url: "/?pwa=true", revision },
   { url: "/manifest.webmanifest", revision },
+  { url: "/icon/icon-192x192.png", revision },
+  { url: "/icon/icon-256x256.png", revision },
+  { url: "/icon/icon-384x384.png", revision },
+  { url: "/icon/icon-512x512.png", revision },
   {
     url: "https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js",
     revision: "1.6.0",
-  },
-  {
-    url: "/icon/icon-192x192.png",
-    revision,
-  },
-  {
-    url: "/icon/icon-256x256.png",
-    revision,
-  },
-  {
-    url: "/icon/icon-384x384.png",
-    revision,
-  },
-  {
-    url: "/icon/icon-512x512.png",
-    revision,
   },
 ]);
 cleanupOutdatedCaches();
