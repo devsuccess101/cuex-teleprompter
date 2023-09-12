@@ -1,7 +1,6 @@
 import { $, component$, useContext, useSignal } from "@builder.io/qwik";
 import { LuFileWarning, LuX } from "@qwikest/icons/lucide";
 import { get } from "lodash";
-import mammoth from "mammoth";
 import { CuexContext } from "./context";
 import { Dropzone } from "./dropzone";
 import { Modal } from "flowbite";
@@ -17,13 +16,14 @@ export const ImportModal = component$(() => {
 
     reader.onload = function (loadEvent: any) {
       const arrayBuffer = loadEvent.target.result;
-      mammoth
+      // @ts-ignore
+      window.mammoth
         .convertToHtml({ arrayBuffer: arrayBuffer })
         .then(({ value }: any) => {
           cuex.setEditorContent(value);
           new Modal(modalRef.value).hide();
         })
-        .catch((e) => (err.value = e));
+        .catch((e: Error) => (err.value = e));
     };
 
     reader.readAsArrayBuffer(file);
@@ -60,6 +60,13 @@ export const ImportModal = component$(() => {
           </div>
         </div>
       </div>
+      <script
+        async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"
+        integrity="sha512-sG5Q7boJL+ft/weuz6Mmi9XBD+bEzE9AI2FMP4YMFxp3FpTFUQSQQm5K5cSgJCyed6bWs3W8f8h0lp36lHXhQA=="
+        crossOrigin="anonymous"
+        referrerPolicy="no-referrer"
+      />
     </div>
   );
 });
