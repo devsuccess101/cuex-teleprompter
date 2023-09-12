@@ -4,6 +4,9 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { partytownVite } from "@builder.io/partytown/utils";
 import { join } from "path";
+import git from 'git-rev-sync';
+
+process.env.VITE_GIT_COMMIT_HASH = git.short();
 
 export default defineConfig(() => {
   return {
