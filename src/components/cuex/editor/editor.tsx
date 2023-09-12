@@ -1,22 +1,18 @@
-import { type Signal, component$, useContext } from "@builder.io/qwik";
+import { component$, useContext } from "@builder.io/qwik";
 import { CuexContext } from "../context";
 import styles from "./editor.module.css";
 
-interface EditorProps {
-  ref?: Signal<HTMLElement | undefined>;
-}
-
-export const Editor = component$<EditorProps>(({ ref }) => {
-  const { config } = useContext(CuexContext);
+export const Editor = component$(() => {
+  const { config, scrollBoxRef, editorRef } = useContext(CuexContext);
 
   return (
     <div
-      ref={ref}
+      ref={scrollBoxRef}
       class={styles["cuex-editor-root"]}
       data-status={config.status}
     >
       <div
-        id="cuex-editor"
+        ref={editorRef}
         class={styles["cuex-editor"]}
         style={{
           fontSize: `${config.fontSize}px`,

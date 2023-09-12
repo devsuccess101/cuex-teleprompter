@@ -5,6 +5,7 @@ import {
   LuAlignJustify,
   LuAlignLeft,
   LuAlignRight,
+  LuFileText,
   LuFlipHorizontal,
   LuFlipVertical,
   LuMoveHorizontal,
@@ -19,12 +20,13 @@ import { Slide } from "../slide";
 import { ToolbarButton } from "../button/toolbar-button";
 import { ResetModal } from "../reset-modal";
 import styles from "./toolbar.module.css";
+import { ImportModal } from "../import-modal";
 
 export const Toolbar = component$(() => {
   const cuex = useContext(CuexContext);
 
   return (
-    <div class={styles["toolbar"]}>
+    <div id="toolbar" class={styles["toolbar"]}>
       <div class="flex items-center">
         <ToolbarButton
           title="Reset"
@@ -209,6 +211,14 @@ export const Toolbar = component$(() => {
           onClick$={() => cuex.update({ flipY: !cuex.config.flipY })}
         >
           <LuFlipVertical />
+        </ToolbarButton>
+        <ToolbarButton
+          title="Read from file: doc, docx"
+          data-modal-target="import-modal"
+          data-modal-toggle="import-modal"
+        >
+          <LuFileText />
+          <ImportModal q:slot="overlay" />
         </ToolbarButton>
 
         <ToolbarButton

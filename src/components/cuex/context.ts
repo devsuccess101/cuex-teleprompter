@@ -13,14 +13,15 @@ export interface CuexConfig {
 
 export interface CuexStore {
   config: CuexConfig;
-  ref: Signal<HTMLElement | undefined>;
+  scrollBoxRef: Signal<HTMLElement | undefined>;
+  editorRef: Signal<HTMLElement | undefined>;
   update: QRL<(this: CuexStore, data: Partial<CuexConfig>) => void>;
   reset: QRL<(this: CuexStore) => void>;
   startOrResume: QRL<(this: CuexStore) => void>;
   pause: QRL<(this: CuexStore) => void>;
   scroll: QRL<(this: CuexStore) => void>;
   scrollInterval?: any;
-  focus: QRL<(this: CuexStore) => void>;
+  setEditorContent: QRL<(this: CuexStore, contents: string) => void>;
 }
 
 export const defaultConfig: CuexConfig = {

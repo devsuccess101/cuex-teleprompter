@@ -18,14 +18,16 @@ import { Editor } from "~/components/cuex/editor/editor";
 import { Toolbar } from "~/components/cuex/toolbar/toolbar";
 
 export default component$(() => {
-  const scrollViewRef = useSignal<HTMLElement>();
+  const scrollerRef = useSignal<HTMLElement>();
+  const editorRef = useSignal<HTMLElement>();
+
   const cuex = useStore<CuexStore>({
-    ref: scrollViewRef,
+    scrollBoxRef: scrollerRef,
+    editorRef,
     config: defaultConfig,
-    focus: $(function (this) {
-      const editor = document.getElementById("cuex-editor");
-      if (editor) {
-        editor.innerHTML = "";
+    setEditorContent: $(function (this, contents: string) {
+      if (this.editorRef.value) {
+        this.editorRef.value.innerHTML = contents;
       }
     }),
     update: $(function (this, data) {
@@ -36,8 +38,8 @@ export default component$(() => {
         if (this.scrollInterval) {
           clearInterval(this.scrollInterval);
           this.scrollInterval = undefined;
-          if (this.ref.value) {
-            this.ref.value.scrollTop = 0;
+          if (this.scrollBoxRef.value) {
+            this.scrollBoxRef.value.scrollTop = 0;
           }
         }
       }
@@ -55,7 +57,7 @@ export default component$(() => {
     }),
     reset: $(function (this) {
       this.update(defaultConfig);
-      this.focus();
+      this.setEditorContent("");
     }),
     startOrResume: $(function (this) {
       if (this.config.status !== "running") {
@@ -76,16 +78,16 @@ export default component$(() => {
       }
     }),
     scroll: $(function (this) {
-      if (this.config.status === "running" && this.ref.value) {
-        const scrollTop = this.ref.value.scrollTop;
-        const scrollHeight = this.ref.value.scrollHeight;
+      if (this.config.status === "running" && this.scrollBoxRef.value) {
+        const scrollTop = this.scrollBoxRef.value.scrollTop;
+        const scrollHeight = this.scrollBoxRef.value.scrollHeight;
         const windowHeight = window.innerHeight;
 
         if (scrollTop + windowHeight >= scrollHeight) {
-          this.ref.value.scrollTop = 0;
+          this.scrollBoxRef.value.scrollTop = 0;
         } else {
-          const currentScroll = this.ref.value.scrollTop;
-          this.ref.value.scrollTop = currentScroll + 2;
+          const currentScroll = this.scrollBoxRef.value.scrollTop;
+          this.scrollBoxRef.value.scrollTop = currentScroll + 2;
         }
       }
     }),
@@ -106,7 +108,10 @@ export default component$(() => {
 
   return (
     <div
-      class="flex flex-col h-screen overflow-hidden"
+      class={[
+        "flex h-screen overflow-hidden",
+        cuex.config.flipY ? "flex-col-reverse" : "flex-col",
+      ]}
       style={{
         maxHeight: "-webkit-fill-available",
         transform:
@@ -114,7 +119,7 @@ export default component$(() => {
           `rotateX(${cuex.config.flipY ? 180 : 0}deg)`,
       }}
     >
-      <Editor ref={scrollViewRef} />
+      <Editor />
       <Toolbar />
     </div>
   );
