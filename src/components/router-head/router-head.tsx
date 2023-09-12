@@ -17,6 +17,10 @@ export const RouterHead = component$(() => {
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
+      <meta
+        name="google-site-verification"
+        content="yu60NP-CTckMJK8rCQBg1xrNZ75rcqoxlg0Pz3-spfo"
+      />
       <link rel="apple-touch-icon" href="/icon/icon-192x192.png" />
       {[192, 256, 384, 512].map((size) => (
         <link
