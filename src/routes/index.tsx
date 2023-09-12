@@ -124,7 +124,7 @@ export default component$(() => {
 
 export const head: DocumentHead = ({ url }) => {
   return {
-    title: "Free Teleprompter - CueX",
+    title: "Free Teleprompter",
     meta: [
       {
         name: "description",
