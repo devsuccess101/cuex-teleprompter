@@ -14,18 +14,31 @@ import {
   precacheAndRoute,
 } from "workbox-precaching";
 import { NavigationRoute, registerRoute } from "workbox-routing";
+import { CacheFirst } from "workbox-strategies";
+
+const revision = import.meta.env.VITE_GIT_COMMIT_HASH;
+
+precacheAndRoute([
+  { url: "/", revision },
+  { url: "/?pwa=true", revision },
+  { url: "/manifest.json", revision },
+  {
+    url: "https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js",
+    revision: "1.6.0",
+  },
+]);
+cleanupOutdatedCaches();
+registerRoute(new NavigationRoute(createHandlerBoundToURL("/")));
+registerRoute(new NavigationRoute(createHandlerBoundToURL("/?pwa=true")));
+registerRoute(
+  ({ request }) =>
+    request.destination === "style" || request.destination === "image",
+  new CacheFirst(),
+);
 
 setupServiceWorker();
 
-addEventListener("install", () => {
-  self.skipWaiting();
-
-  // perform offline mode
-  precacheAndRoute(["/", "/?pwa=true"]);
-  cleanupOutdatedCaches();
-  registerRoute(new NavigationRoute(createHandlerBoundToURL("/")));
-  registerRoute(new NavigationRoute(createHandlerBoundToURL("/?pwa=true")));
-});
+addEventListener("install", () => self.skipWaiting());
 
 addEventListener("activate", () => self.clients.claim());
 
