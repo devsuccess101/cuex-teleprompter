@@ -110,7 +110,7 @@ export default component$(() => {
     <div
       class="flex h-screen overflow-hidden flex-col relative"
       style={{
-        maxHeight: "-webkit-fill-available",
+        // maxHeight: "-webkit-fill-available",
         transform:
           `rotateY(${cuex.config.flipX ? 180 : 0}deg)` +
           `rotateX(${cuex.config.flipY ? 180 : 0}deg)`,
