@@ -116,7 +116,7 @@ export const Toolbar = component$(() => {
             <div class="py-4 flex justify-center items-center">
               <Slide
                 title="Font size"
-                min={16}
+                min={22}
                 max={180}
                 value={cuex.config.fontSize}
                 onInput$={(e: any) =>
