@@ -23,7 +23,7 @@ export default component$(() => {
         <link rel="manifest" href="/manifest.webmanifest" />
         <RouterHead />
       </head>
-      <body lang="en">
+      <body lang="en" class="bg-black">
         <RouterOutlet />
         <ServiceWorkerRegister />
         <QwikPartytown forward={["dataLayer.push"]} />
