@@ -2,7 +2,7 @@
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "fullscreen",
-  "orientation": natural",
+  "orientation": "natural",
   "scope": "/",
   "start_url": "/",
   "name": "CueX",
