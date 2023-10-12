@@ -444,10 +444,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
-"@qwikest/icons@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@qwikest/icons/-/icons-0.0.8.tgz#ce8bff2f0c96ace81b610443225d25c26f8b2aae"
-  integrity sha512-H5bD/UtAXbP8dsZEfmWmLuySS9bZIdlamxKiIeztgf4EtJEuBGB7c0aG3ZZ8FDRGKRvOS2bOy5CRSc97viiWGA==
+"@qwikest/icons@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@qwikest/icons/-/icons-0.0.10.tgz#e22ac11eb0e23287c6895a0bb91d6dc040b502ef"
+  integrity sha512-GjgYvwv0VRW/tK1m05Z04I0aYh/7f6MCsJOPbYr8dRLoEvtiqm+WfA/nzgK+9LebJjUFT9UCgmBitZiruvqzrg==
   dependencies:
     simple-icons "^8.6.0"
     tsm "^2.3.0"
