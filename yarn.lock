@@ -511,14 +511,14 @@
   integrity sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==
 
 "@types/git-rev-sync@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/git-rev-sync/-/git-rev-sync-2.0.0.tgz#9de6e18cb01e65f769de77175bbe93254664023e"
-  integrity sha512-qGYApbb0m8Ofy3pwYks+kYVIZQAN/cqNucJGbl5O5GpLw9JSzp74rkTWDhPv3brrJfJb5/ixtimLJpo4tfh2QA==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/git-rev-sync/-/git-rev-sync-2.0.1.tgz#4b945cd446a6b94447516f4cc2869f8b653002ef"
+  integrity sha512-L8yu3FMSyDhBRudlhAqTH8KTFYZr3niTFvxVUHPBaMIIUk5EGhoQBAYxHapfEdOStMxUMYvp+n1Ofnr5mdC+bQ==
 
 "@types/hast@^2.0.0":
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/@types/hast/-/hast-2.3.5.tgz#08caac88b44d0fdd04dc17a19142355f43bd8a7a"
-  integrity sha512-SvQi0L/lNpThgPoleH53cdjB3y9zpLlVjRbqB3rH8hx1jiRSBGAhyjV3H+URFjNVRqt2EdYNrbZE5IsGlNfpRg==
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/@types/hast/-/hast-2.3.7.tgz#5e9bd7ab4452d5313aeec9d38fbc193a70f8d810"
+  integrity sha512-EVLigw5zInURhzfXUM65eixfadfsHKomGKUakToXo84t8gGIJuTcD2xooM2See7GyQ7DRtYjhCHnSUQez8JaLw==
   dependencies:
     "@types/unist" "^2"
 
