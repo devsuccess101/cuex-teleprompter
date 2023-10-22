@@ -48,7 +48,7 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "@qwikest/icons": "^0.0.10",
+    "@qwikest/icons": "^0.0.13",
     "flowbite": "^1.8.1",
     "lodash": "^4.17.21"
   }
