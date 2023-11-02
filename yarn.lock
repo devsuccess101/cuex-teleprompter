@@ -31,11 +31,12 @@
     zod "^3.22.4"
 
 "@builder.io/qwik@^1.2.10":
-  version "1.2.15"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.2.15.tgz#3a9576e08a09955c6d7d881c4d6292dc5362e17c"
-  integrity sha512-5aiU1VL4quzEd8pGdeFfJOiN/SUYr6wu1FLEX3piqBxoJL+j8H/3jZeOl4TUZawNNYWZOckH74a3VzAXai/4ZA==
+  version "1.2.16"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.2.16.tgz#5aa286193164c3276bb3c8bb1279b79d1c4ffedb"
+  integrity sha512-ZadMArtIZpdeHeH2Qw5HEbGurCnKJ22i8fvZDlKybPercD8Obf6xk5ox1XcTsliodQWH3O0UJChvXArCrJR0LQ==
   dependencies:
     csstype "^3.1.2"
+    vite "^4.4.11"
 
 "@cloudflare/kv-asset-handler@^0.2.0":
   version "0.2.0"
@@ -3855,7 +3856,7 @@ vite-tsconfig-paths@4.2.1:
     globrex "^0.1.2"
     tsconfck "^2.1.0"
 
-vite@4.5.0:
+vite@4.5.0, vite@^4.4.11:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.5.0.tgz#ec406295b4167ac3bc23e26f9c8ff559287cff26"
   integrity sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==
