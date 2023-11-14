@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@1.22.20",
+  "packageManager": "yarn@1.22.21",
   "engines": {
     "node": ">=18.0.0"
   },
