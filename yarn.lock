@@ -33,9 +33,9 @@
     zod "^3.22.4"
 
 "@builder.io/qwik@^1.2.10":
-  version "1.2.17"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.2.17.tgz#36512db4e86c6fe8b30771b58a6c4fbf856e7af5"
-  integrity sha512-66fGmPHIy/brJqtrUapxckw9EVAh6U3pcjRr1WiqGGjq1cvgJdP88jayMw85XvckEjrF4ymNLOYCmjdlQNzU+Q==
+  version "1.2.18"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.2.18.tgz#2d80847f8e88d3cd7ea6010d51ed5e4c6fc24fc0"
+  integrity sha512-YfkpRI8IoJ6OkIlMoJ4jdjbotZSmBfMtf9ibxbf9vZLgKVLkSbSb4hgpA+NMWwQb/ojgn/6YJ49MwaZP81sm4Q==
   dependencies:
     csstype "^3.1.2"
     vite "^4.4.11"
@@ -2918,10 +2918,15 @@ mz@^2.7.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nanoid@^3.3.3, nanoid@^3.3.6:
+nanoid@^3.3.3:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
+
+nanoid@^3.3.6:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.7.tgz#d0c301a691bc8d54efa0a2226ccf3fe2fd656bd8"
+  integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
 
 napi-build-utils@^1.0.1:
   version "1.0.2"
