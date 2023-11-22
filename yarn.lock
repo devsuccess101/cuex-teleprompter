@@ -33,9 +33,9 @@
     zod "^3.22.4"
 
 "@builder.io/qwik@^1.2.10":
-  version "1.2.18"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.2.18.tgz#2d80847f8e88d3cd7ea6010d51ed5e4c6fc24fc0"
-  integrity sha512-YfkpRI8IoJ6OkIlMoJ4jdjbotZSmBfMtf9ibxbf9vZLgKVLkSbSb4hgpA+NMWwQb/ojgn/6YJ49MwaZP81sm4Q==
+  version "1.2.19"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.2.19.tgz#1463c043f0476b61cba28be1f05510afd3e9985a"
+  integrity sha512-nmext30MPih1vSgsNpdx2jzBbeBKpsWjsLFI0Shs9+ec3z2QUrE9NJO+2P7cduxNt87hyul+twJ3UlJJ6pKxUQ==
   dependencies:
     csstype "^3.1.2"
     vite "^4.4.11"
