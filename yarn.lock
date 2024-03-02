@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@builder.io/partytown@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.9.0.tgz#f58cb62591f238fa1ba41087132558b53b9dc41d"
-  integrity sha512-kWMcSKBFeymAbumz+pWEYKgdI1JOD6QdkZRi16/ANuCqq2nZ6xZZvXOxWxodN71gBbY+6O31dRd2bMfZNLESJw==
+"@builder.io/partytown@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.10.0.tgz#ce2caa275f1fed355c3aefd49790dc2ff29b88c6"
+  integrity sha512-OS/o9lAmK5rZZLkjFmghPNmp3P40uTF5yu2rFY3TVlnSie7CQhwrQ+5lycUkHqrDVyI4NOnOiA655Q1eGPE2pw==
 
 "@builder.io/qwik-city@^1.2.10":
   version "1.2.19"
