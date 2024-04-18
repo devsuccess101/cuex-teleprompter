@@ -22,6 +22,7 @@ export const Editor = component$(() => {
           paddingRight: `${config.margin}%`,
         }}
         contentEditable={config.status !== "running" ? "true" : "false"}
+        // @ts-ignore
         placeholder="Enter your text here..."
         {...{ autofocus: "true" }}
       />
