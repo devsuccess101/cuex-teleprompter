@@ -7,7 +7,10 @@ import {
   useStore,
   useVisibleTask$,
 } from "@builder.io/qwik";
-import { pick, keys, omit, assign } from "lodash";
+import assign from "lodash/assign";
+import pick from "lodash/pick";
+import keys from "lodash/keys";
+import omit from "lodash/omit";
 import {
   defaultConfig,
   CuexContext,

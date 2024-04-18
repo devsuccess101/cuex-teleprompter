@@ -1,6 +1,6 @@
 import { $, component$, useContext, useSignal } from "@builder.io/qwik";
 import { LuFileWarning, LuX } from "@qwikest/icons/lucide";
-import { get } from "lodash";
+import get from "lodash/get";
 import { CuexContext } from "./context";
 import { Dropzone } from "./dropzone";
 import { Modal } from "flowbite";
