@@ -33,9 +33,9 @@
     zod "^3.22.4"
 
 "@builder.io/qwik@^1.2.10":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.5.4.tgz#f4401e123228a1daeea9c864fcb461a1f8c4ce99"
-  integrity sha512-Ws/yHHbTkDE7wRMpYesrZzQ/RhAL/I55pvSfjTZxnARycWTaZNFDBeqM9iNv7/1mBjoA5lL0EUSxo2iQHRrM9A==
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.5.5.tgz#717913613638db0fbc690d734e079a3464b22f93"
+  integrity sha512-ZgeWVfkgdBcv/SwfB0RJtSR6YCVBnFtZ4dH1yxDqeShzgFrVqeVIE7l7A5wwb0hXtA6ESxskLgui6ayZlKSnWQ==
   dependencies:
     csstype "^3.1.3"
     vite "^5.2.10"
@@ -3224,9 +3224,9 @@ periscopic@^3.0.0:
     is-reference "^3.0.0"
 
 picocolors@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
-  integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.1.tgz#a8ad579b571952f0e5d25892de5445bcfe25aaa1"
+  integrity sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==
 
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   version "2.3.1"
