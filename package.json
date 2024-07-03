@@ -40,7 +40,7 @@
     "tailwindcss": "3.4.4",
     "typescript": "5.5.3",
     "undici": "6.19.2",
-    "vite": "5.3.2",
+    "vite": "5.3.3",
     "vite-tsconfig-paths": "4.3.2",
     "workbox-precaching": "^7.0.0",
     "workbox-routing": "^7.0.0",
