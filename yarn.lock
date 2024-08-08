@@ -1744,9 +1744,9 @@ escape-string-regexp@^4.0.0:
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
 eslint-plugin-qwik@^1.2.10:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-qwik/-/eslint-plugin-qwik-1.7.3.tgz#c6d9146be9da0fff0026e6b8a6982e7a55a99bd5"
-  integrity sha512-1PGlVFmRfo/rlFQ/ZdzFdrtK3DdxEdmeVos0W8eJqIEDh7KkhjdIP6XIStf/SEYZ8KVcvEHgeDMv+vQm5QVcGA==
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-qwik/-/eslint-plugin-qwik-1.8.0.tgz#33cf7795321811c9418f1970a91c437a9dafbcac"
+  integrity sha512-WcyWSnmPbi4OX3nNxsKROu3F6MhP19CHAOVmGihWEJihbA6WWW6X8RB1jNROLqVg75RIZRH6kg3KzfdwesfW/g==
   dependencies:
     jsx-ast-utils "^3.3.5"
 
