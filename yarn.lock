@@ -885,9 +885,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "22.5.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.1.tgz#de01dce265f6b99ed32b295962045d10b5b99560"
-  integrity sha512-KkHsxej0j9IW1KKOOAA/XBA0z08UFSrRQHErzEfA3Vgq57eXIMYboIlHJuYIfd+lwCQjtKqUu3UnmKbtUc9yRw==
+  version "22.5.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.2.tgz#e42344429702e69e28c839a7e16a8262a8086793"
+  integrity sha512-acJsPTEqYqulZS/Yp/S3GgeE6GZ0qYODUR8aVr/DkhHQ8l9nd4j5x1/ZJy9/gHrRlFMqkO6i0I3E27Alu4jjPg==
   dependencies:
     undici-types "~6.19.2"
 
@@ -3074,10 +3074,10 @@ mini-svg-data-uri@^1.4.3:
   resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
   integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
-miniflare@3.20240821.0:
-  version "3.20240821.0"
-  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20240821.0.tgz#d4fc648ca20c033c4143a8d0ef061dedccad7c2d"
-  integrity sha512-4BhLGpssQxM/O6TZmJ10GkT3wBJK6emFkZ3V87/HyvQmVt8zMxEBvyw5uv6kdtp+7F54Nw6IKFJjPUL8rFVQrQ==
+miniflare@3.20240821.1:
+  version "3.20240821.1"
+  resolved "https://registry.yarnpkg.com/miniflare/-/miniflare-3.20240821.1.tgz#a52929883aa413e3b72de1c61865b23ccf70c1e1"
+  integrity sha512-81qdiryDG7VXzZuoa0EwhkaIYYrn7+StRIrd/2i7SPqPUNICUBjbhFFKqTnvE1+fqIPPB6l8ShKFaFvmnZOASg==
   dependencies:
     "@cspotcode/source-map-support" "0.8.1"
     acorn "^8.8.0"
@@ -4304,9 +4304,9 @@ workerd@1.20240821.1:
     "@cloudflare/workerd-windows-64" "1.20240821.1"
 
 wrangler@^3.0.0:
-  version "3.73.0"
-  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.73.0.tgz#129f7dc97ce7202477349c2025bd37216152c387"
-  integrity sha512-VrdDR2OpvsCQp+r5Of3rDP1W64cNN/LHLVx1roULOlPS8PZiv7rUYgkwhdCQ61+HICAaeSxWYIzkL5+B9+8W3g==
+  version "3.74.0"
+  resolved "https://registry.yarnpkg.com/wrangler/-/wrangler-3.74.0.tgz#eee36930eaf29eee182369a5d2e1b177ffe2c141"
+  integrity sha512-wmtb+tQrgb61yN+Wa2JM98G1Gt4tKFRYPw6xwuyzUcA74L+Dum1A13w22/manl9Gq1jA3dPn+7UzT5sYEVHRog==
   dependencies:
     "@cloudflare/kv-asset-handler" "0.3.4"
     "@cloudflare/workers-shared" "0.4.1"
@@ -4316,7 +4316,7 @@ wrangler@^3.0.0:
     chokidar "^3.5.3"
     date-fns "^3.6.0"
     esbuild "0.17.19"
-    miniflare "3.20240821.0"
+    miniflare "3.20240821.1"
     nanoid "^3.3.3"
     path-to-regexp "^6.2.0"
     resolve "^1.22.8"
